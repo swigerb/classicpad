@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>classicpad</AssemblyName>
+    <RootNamespace>ClassicPad</RootNamespace>
+    <ApplicationIcon>Assets\classicpad.ico</ApplicationIcon>
+    <Platforms>x86;x64;AnyCPU</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Assets\classicpad.ico" />
+  </ItemGroup>
+
+</Project>

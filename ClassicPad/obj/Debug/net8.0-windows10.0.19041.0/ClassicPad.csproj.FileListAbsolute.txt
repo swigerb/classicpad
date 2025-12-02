@@ -1,0 +1,17 @@
+C:\Users\brswig\classicpad\ClassicPad\bin\Debug\net8.0-windows10.0.19041.0\classicpad.exe
+C:\Users\brswig\classicpad\ClassicPad\bin\Debug\net8.0-windows10.0.19041.0\classicpad.deps.json
+C:\Users\brswig\classicpad\ClassicPad\bin\Debug\net8.0-windows10.0.19041.0\classicpad.runtimeconfig.json
+C:\Users\brswig\classicpad\ClassicPad\bin\Debug\net8.0-windows10.0.19041.0\classicpad.dll
+C:\Users\brswig\classicpad\ClassicPad\bin\Debug\net8.0-windows10.0.19041.0\classicpad.pdb
+C:\Users\brswig\classicpad\ClassicPad\bin\Debug\net8.0-windows10.0.19041.0\Microsoft.Windows.SDK.NET.dll
+C:\Users\brswig\classicpad\ClassicPad\bin\Debug\net8.0-windows10.0.19041.0\WinRT.Runtime.dll
+C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ClassicPad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ClassicPad.AssemblyInfoInputs.cache
+C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ClassicPad.AssemblyInfo.cs
+C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ClassicPad.csproj.CoreCompileInputs.cache
+C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ClassicPad.csproj.Up2Date
+C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\classicpad.dll
+C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\refint\classicpad.dll
+C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\classicpad.pdb
+C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ClassicPad.genruntimeconfig.cache
+C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ref\classicpad.dll
