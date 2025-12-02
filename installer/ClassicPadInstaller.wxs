@@ -32,6 +32,7 @@
           Directory="ProgramMenuDir"
           Name="$(var.ProductName)"
           WorkingDirectory="INSTALLFOLDER"
+          Target="[#filClassicPadExe]"
           Description="Launch $(var.ProductName)"
           Icon="ClassicPadIcon"
           IconIndex="0" />

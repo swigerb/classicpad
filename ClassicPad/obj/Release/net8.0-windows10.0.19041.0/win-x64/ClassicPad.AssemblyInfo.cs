@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("classicpad")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f22c115b3a0be6e4a6d3b1e028ad25325cbb3837")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e74b28c1c9c62ed3f397dc0a15004b0d65fa60b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("classicpad")]
 [assembly: System.Reflection.AssemblyTitleAttribute("classicpad")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

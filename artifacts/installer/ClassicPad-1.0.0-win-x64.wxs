@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Codepage="65001" Manufacturer="ClassicPad" ProductCode="{C241868B-BBDA-48CB-8157-826C0063DA42}" Language="1033" Name="ClassicPad" Version="1.0.0" UpgradeCode="{2F0C58C8-7600-4F75-90C3-0EB2F5F5D98F}">
+    <Property Id="ARPPRODUCTICON" Value="ClassicPadIcon" />
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="INSTALLFOLDER" ShortName="pzcnph2r" Name="ClassicPad">
+        <Component Id="cmpClassicPadDeps" Guid="{AA18950C-3BDB-42A4-B7B6-C21C3EC091EF}" Bitness="always32">
+          <File Id="filD0hQr6K5Pi7AOluRclznENoLG.o" ShortName="vs71_uqw.jso" Name="classicpad.deps.json" KeyPath="yes" Source="SourceDir\File\filD0hQr6K5Pi7AOluRclznENoLG.o" />
+        </Component>
+        <Component Id="cmpClassicPadDll" Guid="{0A1FAAF6-6FC5-4F71-98A1-5BC5361F7A9C}" Bitness="always32">
+          <File Id="fil9PSUB34cmM0EuQQRA3Nj2gzUK4Y" ShortName="qo0do8uh.dll" Name="classicpad.dll" KeyPath="yes" Source="SourceDir\File\fil9PSUB34cmM0EuQQRA3Nj2gzUK4Y" />
+        </Component>
+        <Component Id="cmpClassicPadExe" Guid="{F8E18CD2-8C86-4146-9F79-19438C718DB5}" Bitness="always32">
+          <Shortcut Id="ClassicPadStartMenuShortcut" Directory="ProgramMenuDir" Description="Launch ClassicPad" Icon="ClassicPadIcon" IconIndex="0" WorkingDirectory="INSTALLFOLDER" ShortName="vucs7mqv" Name="ClassicPad" Target="[INSTALLFOLDER]" />
+          <RemoveFolder Id="RemoveStartMenuFolder" On="uninstall" Directory="ProgramMenuDir" />
+          <File Id="filClassicPadExe" ShortName="by2abmuu.exe" Name="classicpad.exe" KeyPath="yes" Source="SourceDir\File\filClassicPadExe" />
+        </Component>
+        <Component Id="cmpClassicPadPdb" Guid="{7C25A997-B155-4F81-AE66-70837943A712}" Bitness="always32">
+          <File Id="filZ0DkYhZjOZUOa0RByLYgv0SHxSw" ShortName="n_w5xnsw.pdb" Name="classicpad.pdb" KeyPath="yes" Source="SourceDir\File\filZ0DkYhZjOZUOa0RByLYgv0SHxSw" />
+        </Component>
+        <Component Id="cmpClassicPadRuntimeConfig" Guid="{9CB3BB1C-F235-4E5D-B7B5-2A5DC12D3C54}" Bitness="always32">
+          <File Id="fil_zV4iki6SY8BT8lk4PUx9K_I5v8" ShortName="5knn5tgz.jso" Name="classicpad.runtimeconfig.json" KeyPath="yes" Source="SourceDir\File\fil_zV4iki6SY8BT8lk4PUx9K_I5v8" />
+        </Component>
+        <Component Id="cmpWinRT" Guid="{83373E70-046D-4B26-B74B-3F81107C5E77}" Bitness="always32">
+          <File Id="fil6RW4H1MrOWPrGdborS_seYBDD2k" ShortName="3mlkmgtc.dll" Name="WinRT.Runtime.dll" KeyPath="yes" Source="SourceDir\File\fil6RW4H1MrOWPrGdborS_seYBDD2k" />
+        </Component>
+        <Component Id="cmpWindowsSdk" Guid="{FE67E645-7402-4A8B-8E09-D49C569ACAAC}" Bitness="always32">
+          <File Id="filMxXS0Ko1LcDKLP.r9lS3QK15Glo" ShortName="lz4txfw_.dll" Name="Microsoft.Windows.SDK.NET.dll" KeyPath="yes" Source="SourceDir\File\filMxXS0Ko1LcDKLP.r9lS3QK15Glo" />
+        </Component>
+      </Directory>
+    </StandardDirectory>
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="ProgramMenuDir" ShortName="upy7d16l" Name="ClassicPad" />
+    </StandardDirectory>
+    <Feature Id="MainFeature" Title="ClassicPad" Level="1">
+      <ComponentRef Id="cmpClassicPadDeps" />
+      <ComponentRef Id="cmpClassicPadDll" />
+      <ComponentRef Id="cmpClassicPadExe" />
+      <ComponentRef Id="cmpClassicPadPdb" />
+      <ComponentRef Id="cmpClassicPadRuntimeConfig" />
+      <ComponentRef Id="cmpWinRT" />
+      <ComponentRef Id="cmpWindowsSdk" />
+    </Feature>
+    <Icon Id="ClassicPadIcon" SourceFile="artifacts/installer/decompile\Icon\ClassicPadIcon" />
+    <Media Id="1" EmbedCab="yes" Cabinet="cab1.cab" />
+    <SummaryInformation Description="ClassicPad Windows Installer" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of ClassicPad is already installed." Schedule="afterInstallFinalize" />
+  </Package>
+</Wix>
