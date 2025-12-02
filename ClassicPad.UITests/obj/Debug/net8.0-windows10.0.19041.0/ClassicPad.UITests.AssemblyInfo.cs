@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClassicPad.UITests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5259645d49743da354dd983ec8822b2c3299caf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0624db0f7beea414c6e60c212dfa7ffc8f8c9cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClassicPad.UITests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClassicPad.UITests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
