@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <UseWinRT>false</UseWinRT>
+  </PropertyGroup>
+
+</Project>

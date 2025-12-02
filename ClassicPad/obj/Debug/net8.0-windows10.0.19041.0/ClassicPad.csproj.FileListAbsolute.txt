@@ -9,6 +9,7 @@ C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\Class
 C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ClassicPad.AssemblyInfoInputs.cache
 C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ClassicPad.AssemblyInfo.cs
 C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ClassicPad.csproj.CoreCompileInputs.cache
+C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ClassicPad.sourcelink.json
 C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\ClassicPad.csproj.Up2Date
 C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\classicpad.dll
 C:\Users\brswig\classicpad\ClassicPad\obj\Debug\net8.0-windows10.0.19041.0\refint\classicpad.dll

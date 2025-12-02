@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <IsPackable>false</IsPackable>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+    <PackageReference Include="xunit" Version="2.6.6" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.6">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Xunit.StaFact" Version="1.2.69" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassicPad\ClassicPad.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WinRtDependency Include="..\ClassicPad\bin\$(Configuration)\$(TargetFramework)\Microsoft.Windows.SDK.NET.dll" />
+    <WinRtDependency Include="..\ClassicPad\bin\$(Configuration)\$(TargetFramework)\WinRT.Runtime.dll" />
+  </ItemGroup>
+
+  <Target Name="CopyWinRtDependencies" BeforeTargets="CopyFilesToOutputDirectory">
+    <Copy SourceFiles="@(WinRtDependency)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" Condition="Exists('%(WinRtDependency.Identity)')" />
+  </Target>
+
+</Project>

@@ -61,7 +61,14 @@ Each file stays under ~500 LOC and includes sparse, high-signal comments when ad
 
 ## Tests
 
-ClassicPad is a WinForms desktop application. The primary validation is `dotnet build` plus manual smoke testing of menu verbs. For automated UI testing, consider adding WinAppDriver or Playwright driver scripts in future contributions.
+```bash
+dotnet test
+```
+
+This command runs two suites:
+
+- `ClassicPad.Tests` exercises logic-only components such as `DocumentSession`.
+- `ClassicPad.UITests` is an STA-aware WinForms harness that instantiates dialogs/forms to verify layout guarantees (e.g., editor placement and button sizing) without needing external automation drivers.
 
 ## Contributing
 
