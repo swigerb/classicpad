@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package
+    Name="$(var.ProductName)"
+    Manufacturer="$(var.Manufacturer)"
+    Version="$(var.ProductVersion)"
+    UpgradeCode="2F0C58C8-7600-4F75-90C3-0EB2F5F5D98F"
+    Language="1033">
+    <SummaryInformation Description="$(var.ProductName) Windows Installer" Manufacturer="$(var.Manufacturer)" />
+    <MajorUpgrade Schedule="afterInstallExecute" DowngradeErrorMessage="A newer version of $(var.ProductName) is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+    <Feature Id="MainFeature" Title="$(var.ProductName)" Level="1">
+      <ComponentGroupRef Id="ClassicPadComponents" />
+    </Feature>
+  </Package>
+
+  <Fragment>
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="INSTALLFOLDER" Name="$(var.ProductName)" />
+    </StandardDirectory>
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="ProgramMenuDir" Name="$(var.ProductName)" />
+    </StandardDirectory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ClassicPadComponents" Directory="INSTALLFOLDER">
+      <Component Id="cmpClassicPadExe" Guid="F8E18CD2-8C86-4146-9F79-19438C718DB5">
+        <File Id="filClassicPadExe" Source="$(var.PublishDir)classicpad.exe" KeyPath="yes" />
+        <Shortcut
+          Id="ClassicPadStartMenuShortcut"
+          Directory="ProgramMenuDir"
+          Name="$(var.ProductName)"
+          WorkingDirectory="INSTALLFOLDER"
+          Description="Launch $(var.ProductName)"
+          Icon="ClassicPadIcon"
+          IconIndex="0" />
+        <RemoveFolder Id="RemoveStartMenuFolder" Directory="ProgramMenuDir" On="uninstall" />
+      </Component>
+      <Component Id="cmpClassicPadDll" Guid="0A1FAAF6-6FC5-4F71-98A1-5BC5361F7A9C">
+        <File Source="$(var.PublishDir)classicpad.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmpClassicPadDeps" Guid="AA18950C-3BDB-42A4-B7B6-C21C3EC091EF">
+        <File Source="$(var.PublishDir)classicpad.deps.json" KeyPath="yes" />
+      </Component>
+      <Component Id="cmpClassicPadRuntimeConfig" Guid="9CB3BB1C-F235-4E5D-B7B5-2A5DC12D3C54">
+        <File Source="$(var.PublishDir)classicpad.runtimeconfig.json" KeyPath="yes" />
+      </Component>
+      <Component Id="cmpClassicPadPdb" Guid="7C25A997-B155-4F81-AE66-70837943A712">
+        <File Source="$(var.PublishDir)classicpad.pdb" KeyPath="yes" />
+      </Component>
+      <Component Id="cmpWinRT" Guid="83373E70-046D-4B26-B74B-3F81107C5E77">
+        <File Source="$(var.PublishDir)WinRT.Runtime.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="cmpWindowsSdk" Guid="FE67E645-7402-4A8B-8E09-D49C569ACAAC">
+        <File Source="$(var.PublishDir)Microsoft.Windows.SDK.NET.dll" KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+
+  <Fragment>
+    <Icon Id="ClassicPadIcon" SourceFile="$(var.IconPath)" />
+    <Property Id="ARPPRODUCTICON" Value="ClassicPadIcon" />
+  </Fragment>
+</Wix>

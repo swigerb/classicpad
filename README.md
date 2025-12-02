@@ -70,6 +70,19 @@ This command runs two suites:
 - `ClassicPad.Tests` exercises logic-only components such as `DocumentSession`.
 - `ClassicPad.UITests` is an STA-aware WinForms harness that instantiates dialogs/forms to verify layout guarantees (e.g., editor placement and button sizing) without needing external automation drivers.
 
+## Creating an MSI installer
+
+ClassicPad ships with a WiX-based packaging script so you can generate a Windows Installer MSI without leaving the repo:
+
+1. Install the WiX CLI once per machine: `dotnet tool install --global wix`.
+2. Run the helper script (PowerShell):
+
+	```powershell
+	pwsh ./scripts/build-installer.ps1 -Version "1.0.0"
+	```
+
+The script publishes the WinForms app to `artifacts/publish/<RID>` and then calls WiX to emit `artifacts/installer/ClassicPad-<version>-<rid>.msi`. Additional parameters let you override configuration, runtime identifier, product name, and manufacturer if needed (`pwsh ./scripts/build-installer.ps1 -?` shows the defaults).
+
 ## Contributing
 
 Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for branching, coding-style, and testing guidance. Please review the [Code of Conduct](CODE_OF_CONDUCT.md) before participating.

@@ -1,0 +1,7 @@
+C:\Users\brswig\classicpad\artifacts\publish\win-x64\classicpad.exe
+C:\Users\brswig\classicpad\artifacts\publish\win-x64\classicpad.dll
+C:\Users\brswig\classicpad\artifacts\publish\win-x64\classicpad.deps.json
+C:\Users\brswig\classicpad\artifacts\publish\win-x64\classicpad.runtimeconfig.json
+C:\Users\brswig\classicpad\artifacts\publish\win-x64\classicpad.pdb
+C:\Users\brswig\classicpad\artifacts\publish\win-x64\Microsoft.Windows.SDK.NET.dll
+C:\Users\brswig\classicpad\artifacts\publish\win-x64\WinRT.Runtime.dll
